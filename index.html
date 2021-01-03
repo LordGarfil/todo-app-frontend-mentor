@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+    <div class="background">
+      <img src="images/bg-desktop-light.jpg" />
+    </div>
+
+    <div class="todo-container">
+      <div class="todo-header">
+        <span>TODO</span>
+        <img src="images/icon-moon.svg" alt="" />
+      </div>
+      <div class="todo-body">
+        <div class="todo-main item-active">
+          <form action="POST" class="item-group" id="todo-form">
+            <input type="checkbox" class="checkbox-active" name="checkbox-form" onclick="onChecked(this)" />
+            <input type="text" name="text-form" autofocus />
+          </form>
+        </div>
+        <div class="todo-items" id="todo-items"></div>
+      </div>
+      <div class="item-group todo-footer">
+        <span id="items-left">0 items left</span>
+        <div class="item-status">
+          <span id="all-filter" name="all-filter" class="pointer active-item">All</span>
+          <span id="active-filter" name="active-filter" class="pointer">Active</span>
+          <span id="completed-filter" name="completed-filter" class="pointer">Completed</span>
+        </div>
+        <span id="clear-completed" class="pointer">Clear Completed</span>
+      </div>
+      <div class="item-group todo-footer item-status-stretch">
+        <span id="all-filter" name="all-filter" class="pointer active-item">All</span>
+        <span id="active-filter" name="active-filter" class="pointer">Active</span>
+        <span id="completed-filter" name="completed-filter" class="pointer">Completed</span>
+      </div>
+      <div class="reorder">
+        <span>Drag and drop to reorder list</span>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
